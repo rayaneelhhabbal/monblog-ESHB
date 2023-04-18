@@ -17,7 +17,7 @@ class EasyAdminSubscriber implements EventSubscriberInterface
         ];
     }
 
-    public function setEntityCreatedAt(BeforeEntityPersistedEvent $event)
+    public function setEntityCreatedAt(BeforeEntityPersistedEvent $event): void
     {
        $entity = $event->getEntityInstance();
 
@@ -28,7 +28,7 @@ class EasyAdminSubscriber implements EventSubscriberInterface
        $entity->setCreatedAt(new \DateTime());
     }
 
-    public function setEntityUpdatedAt(BeforeEntityUpdatedEvent $event)
+    public function setEntityUpdatedAt(BeforeEntityUpdatedEvent $event): void
     {
         $entity = $event->getEntityInstance();
 
