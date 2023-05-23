@@ -37,9 +37,6 @@ class ArticleCrudController extends AbstractCrudController
        yield DateTimeField::new('updatedAt')
        ->hideOnForm();
 
-
-
-
     }
     
 }
